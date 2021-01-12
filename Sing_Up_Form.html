@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sing UP Form Js</title>
+    <style>
+  
+   img{
+       width: 100%;
+       height: 100px;
+   }
+
+    </style>
+</head>
+<body>
+    <div id="demo">
+<img src="..\images\facebook.jpg" alt="fb">
+    <h2 style="color: black;">Create a new account</h2>
+    <h4 style="color: cornflowerblue;"> It's quick and easy</h4>
+  <form  name="myForm" >
+   <input type="text" name="fname" id="fname" placeholder="First Name">&nbsp;
+   <input type="text" name="lname" id="lname" placeholder="Sur Name">
+   <br/><br/>
+   <input type="email" name="email" id="email" size=" 47" placeholder="Mobile number or email address">
+   <br/><br/>
+   <input type="password" name="pass" id="pass" placeholder="Password">
+   
+   <h5 style="color: cornflowerblue;"> Date of Birth</h5>
+   <input type="date" name="no" id="no" placeholder="Date Of Birth">
+   
+   
+   <h5 style="color:cornflowerblue;" id="gender"> Gender</h5>
+   <input type= "radio" name="female">Female
+   <input type= "radio" name="male"> Male
+   <input type= "radio" name="custom"> Custom
+   <br/> <br/>
+   <input type= "button" value= "Sing Up" onclick ="validationForm()">
+  </form>  
+</div>
+  <script>
+       function validationForm(event)
+       {
+           
+           //console.log("working");
+
+       //Decleartio
+              // Assing
+            if( document.myForm.fname.value == "" ) 
+              {
+               alert( "Please provide your name!" );
+               document.getElementById("fname").style.border= "1px solid red";
+               return false;
+              }
+
+            if( document.myForm.lname.value == "" ) 
+              {
+                alert( "Please provide your Surname!" );
+                document.getElementById("lname").style.border= "1px solid red";
+                return false;
+              }
+
+            if( document.myForm.email.value == "" ) 
+              {
+                alert( "Please provide your Email!" );
+                document.getElementById("email").style.border= "1px solid red";
+                return false;
+             }
+                
+             if( document.myForm.pass.value == "" ) 
+              {
+                alert( "Please provide your Password!" );
+                document.getElementById("pass").style.border= "1px solid red"; 
+            }
+            
+
+
+            if( document.myForm.no.value == "" ) 
+              {
+            alert( "Please provide your Birth Date!" );
+            document.getElementById("no").style.border= "1px solid red";
+            return false;
+              }
+              
+            if( document.myForm.month.value == "" ) 
+              {
+            alert( "Please provide your Birth month!" );
+            document.getElementById("month").style.border= "1px solid red";
+            return false;
+              }
+              
+    }
+  </script>
+</body>
+</html>
